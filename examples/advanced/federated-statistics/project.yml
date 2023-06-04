@@ -4,7 +4,7 @@ description: NVIDIA FLARE sample project yaml file for AusCAT Federated Analysis
 
 participants:
   # change example.com to the FQDN of the server
-  - name: fed-server
+  - name: 203.101.225.47
     type: server
     org: nvidia
     fed_learn_port: 8002
@@ -59,7 +59,7 @@ builders:
         # 
         overseer_exists: false
         args:
-          sp_end_point: fed-server:8002:8003
+          sp_end_point: 203.101.225.47:8002:8003
   - path: nvflare.lighter.impl.docker.DockerBuilder
     args:
       base_image: python:3.8

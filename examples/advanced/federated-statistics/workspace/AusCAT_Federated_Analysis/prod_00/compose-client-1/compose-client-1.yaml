@@ -1,0 +1,24 @@
+services:
+  site-1:
+    command:
+      - ${PYTHON_EXECUTABLE}
+      - -u
+      - -m
+      - nvflare.private.fed.app.client.client_train
+      - -m
+      - ${WORKSPACE}
+      - -s
+      - fed_client.json
+      - --set
+      - secure_train=true
+      - uid=site-1
+      - org=nvidia
+      - config_folder=config
+    container_name: site-1
+    image: ${IMAGE_NAME}
+    volumes:
+      - ../site-1:${WORKSPACE}
+      - ../admin-site-1@nvidia.com:${WORKSPACE}/admin-site-1@nvidia.com
+      - ../data1.csv:/tmp/nvflare/df_stats/data/site-1/data.csv
+volumes:
+  nvflare_svc_persist: null
