@@ -22,7 +22,9 @@ pip install -r requirements.txt
 In this example, we are using UCI (University of California, Irwin) [adult dataset](https://archive.ics.uci.edu/ml/datasets/adult)
 The original dataset has already contains "training" and "test" datasets. Here we simply assume that "training" and test data sets are belong to different clients.
 so we assigned the training data and test data into two clients.
- 
+
+
+# THIS DOESNT WORK, HAD TO DOWNLOAD SRCIPTS MANUALLY
 Now we use data utility to download UCI datasets to separate client package directory to /tmp/nvflare/data/ directory
 ```shell
 prepare_data.sh

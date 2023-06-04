@@ -1,0 +1,25 @@
+{
+    "name": "df_stats",
+    "resource_spec": {},
+    "min_clients": 2,
+    "deploy_map": {
+        "app": [
+            "@ALL"
+        ]
+    },
+    "job_folder_name": "df_Stats",
+    "submitter_name": "admin-server@nvidia.com",
+    "submitter_org": "nvidia",
+    "submitter_role": "project_admin",
+    "job_id": "4e10fab9-53fb-4b72-81da-02fdf0135a0e",
+    "submit_time": 1685869011.7953653,
+    "submit_time_iso": "2023-06-04T08:56:51.795365+00:00",
+    "start_time": "",
+    "duration": "N/A",
+    "status": "SUBMITTED",
+    "schedule_history": [
+        "2023-06-04 08:56:52: scheduled"
+    ],
+    "schedule_count": 1,
+    "last_schedule_time": 1685869012.3219242
+}
