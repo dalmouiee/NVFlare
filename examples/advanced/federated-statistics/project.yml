@@ -9,7 +9,7 @@ participants:
     org: nvidia
     fed_learn_port: 8002
     admin_port: 8003
-  - name: site-1
+  - name: nvflare-client-1-test
     type: client
     org: nvidia
   - name: site-2
