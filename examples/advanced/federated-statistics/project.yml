@@ -67,3 +67,8 @@ builders:
 
   - path: nvflare.lighter.impl.cert.CertBuilder
   - path: nvflare.lighter.impl.signature.SignatureBuilder
+
+
+  - path: nvflare.lighter.impl.workspace.DistributionBuilder
+    args:
+      zip_password: true

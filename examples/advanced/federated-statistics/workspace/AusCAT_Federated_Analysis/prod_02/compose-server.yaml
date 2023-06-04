@@ -1,0 +1,27 @@
+services:
+  fed-server:
+    command:
+      - ${PYTHON_EXECUTABLE}
+      - -u
+      - -m
+      - nvflare.private.fed.app.server.server_train
+      - -m
+      - ${WORKSPACE}
+      - -s
+      - fed_server.json
+      - --set
+      - secure_train=true
+      - config_folder=config
+      - org=nvidia
+    container_name: fed-server
+    image: ${IMAGE_NAME}
+    ports:
+      - 8002:8002
+      - 8003:8003
+    volumes:
+      - ./203.101.225.47:${WORKSPACE}
+      - ./admin-server@nvidia.com:${WORKSPACE}/admin-server@nvidia.com
+      - ../../../df_stats/jobs/df_stats:/workspace/jobs
+      - nvflare_svc_persist:/tmp/nvflare/
+volumes:
+  nvflare_svc_persist: null
